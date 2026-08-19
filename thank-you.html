@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>You're in — Build. Ship. Get Paid. | The Book Addic</title>
+<meta name="description" content="Your copy of Build. Ship. Get Paid. is ready to download.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FAF8F4">
+<link rel="icon" href="assets/img/cover.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/funnel.css">
+
+<!-- ====== ADD META PIXEL HERE ==========================================
+     Base code, then the purchase event below.
+====================================================================== -->
+
+<!-- ====== ADD GOOGLE ANALYTICS HERE ==================================== -->
+
+<!-- ====== ADD GOOGLE TAG MANAGER HERE ================================== -->
+
+<!-- ====== PURCHASE EVENT ===============================================
+     This page is only reached after the gateway reports a successful
+     payment, so it is the right place to fire your conversion event.
+     Uncomment the block for whichever tool you use and set the value.
+
+     NOTE: this page cannot verify a payment — it simply renders after the
+     gateway redirects here. Treat the gateway's own dashboard as the record
+     of truth for revenue, and this event as marketing attribution only.
+
+<script>
+  // Meta Pixel
+  // fbq('track', 'Purchase', { value: 0.00, currency: 'INR', content_name: 'Build. Ship. Get Paid.' });
+
+  // Google Analytics 4
+  // gtag('event', 'purchase', {
+  //   transaction_id: 'ORDER_ID',
+  //   value: 0.00,
+  //   currency: 'INR',
+  //   items: [{ item_name: 'Build. Ship. Get Paid.' }]
+  // });
+
+  // Google Tag Manager
+  // window.dataLayer = window.dataLayer || [];
+  // window.dataLayer.push({ event: 'purchase', value: 0.00, currency: 'INR' });
+</script>
+====================================================================== -->
+</head>
+
+<body class="ty">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     1. DOWNLOAD
+     The only job of the top of this page: put the file in their hands.
+══════════════════════════════════════════════════════════════════════ -->
+<main class="ty__top">
+  <div class="wrap ty__grid">
+
+    <div>
+      <p class="ty__badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        Payment complete
+      </p>
+
+      <!-- The gateway's own reference, filled in from the redirect and hidden
+           when it sends none. On its own line so a long id never has to be
+           truncated — this is the number a buyer quotes if they email us. -->
+      <p class="ty__ref" data-payref hidden></p>
+
+      <h1>You're in.</h1>
+
+      <p class="ty__sub">
+        Your copy of <b>Build. Ship. Get Paid.</b> is ready. Thank you for your purchase —
+        genuinely.
+      </p>
+
+      <div class="ty__dl">
+        <a class="btn btn--xl" data-download href="#" download>
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 12l5 5 5-5M4 21h16"/></svg>
+          <span data-download-label>Download your e-book</span>
+        </a>
+
+        <p class="ty__meta" data-download-meta>
+          92 pages · PDF · 16 diagrams · yours to keep, on every device you own
+        </p>
+
+        <!-- Only ever visible while DOWNLOAD_URL is unset. A buyer who has
+             already paid must never tap a button that does nothing, so the
+             button becomes an email link and this explains why. -->
+        <div class="ty__missing" data-download-missing hidden>
+          <b>Your file is coming by email.</b>
+          <span>
+            The download link on this page isn't live yet. Mail
+            <a data-email href="#">hello@thebookaddic.com</a> with the payment
+            reference above and your copy will be sent straight over — usually
+            within the hour. Your payment is safe; nothing is lost.
+          </span>
+          <small>
+            Site owner: set <code>DOWNLOAD_URL</code> in
+            <code>assets/js/config.js</code> to the PDF's address.
+          </small>
+        </div>
+
+        <p class="ty__bookmark">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          Keep this page bookmarked so you can come back to your download later.
+        </p>
+      </div>
+    </div>
+
+    <div class="ty__mock">
+      <div class="book">
+        <div class="book__face">
+          <img src="assets/img/cover.png" width="820" height="1040" alt="Cover of Build. Ship. Get Paid., first edition 2026, published by The Book Addic." fetchpriority="high">
+        </div>
+        <div class="book__pages" aria-hidden="true"></div>
+        <div class="book__glow" aria-hidden="true"></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     2. START HERE
+══════════════════════════════════════════════════════════════════════ -->
+<section class="ty__next">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow">Start here</p>
+    <h2>A reading order that gets you moving fastest.</h2>
+
+    <div class="ty__order">
+      <div class="ty__step">
+        <em>01</em>
+        <div>
+          <b>Introduction</b>
+          <span>Why most people never make a rupee, dollar or euro from their website — and the one rule that runs through the whole book.</span>
+        </div>
+      </div>
+      <div class="ty__step">
+        <em>02</em>
+        <div>
+          <b>Chapter 1 — The Money Math Nobody Shows You</b>
+          <span>The equation, the four engines priced honestly, and what your first year actually costs. Read it with a pen.</span>
+        </div>
+      </div>
+      <div class="ty__step">
+        <em>03</em>
+        <div>
+          <b>Chapter 2 — The Four Ladders</b>
+          <span>The order you climb them in, and the three signals that mean it is time to move up. Read chapters 1 and 2 in one sitting.</span>
+        </div>
+      </div>
+      <div class="ty__step">
+        <em>04</em>
+        <div>
+          <b>Chapter 3 — Finding Your Wedge</b>
+          <span>Do the exercise before you read Chapter 4. Chapter 4 will tempt you into building something, and that is exactly the trap.</span>
+        </div>
+      </div>
+      <div class="ty__step">
+        <em>05</em>
+        <div>
+          <b>The Final Action Plan — Your First 90 Days</b>
+          <span>Skim it now so you know where the whole thing is going. Then come back and start at Day 1.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ty__push">
+      Don't just finish the book. Use it.
+      <span>Open the first exercise and do it today — on paper, before you close your laptop. The frameworks are inert until they meet an actual human being who might pay you.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     3. IF THE DOWNLOAD MISBEHAVES
+     Every one of these is a real support email you will otherwise get.
+══════════════════════════════════════════════════════════════════════ -->
+<section class="ty__help">
+  <div class="wrap wrap--narrow ty__help-in">
+
+    <div>
+      <p class="eyebrow">Trouble?</p>
+      <h2 class="h-md">Getting the file open</h2>
+    </div>
+
+    <ul class="ty__help-list">
+      <li>
+        <b>Nothing happened when you tapped the button.</b>
+        Long-press it (or right-click on a computer) and choose <em>Save link as…</em> —
+        some in-app browsers, Instagram's especially, block ordinary downloads.
+      </li>
+      <li>
+        <b>You're on an iPhone.</b>
+        The PDF saves to Files → Downloads. Open it there, tap the share icon, then
+        <em>Copy to Books</em> if you'd rather read it in the Books app.
+      </li>
+      <li>
+        <b>You're on Android.</b>
+        Look in Files → Downloads, or pull down the notification shade and tap the
+        finished download.
+      </li>
+      <li>
+        <b>You lose the file later.</b>
+        Come back to this page — the link doesn't expire. Your payment receipt from
+        the gateway is your proof of purchase.
+      </li>
+    </ul>
+
+    <p class="ty__help-mail">
+      Still stuck, or something looks wrong with the file? Email
+      <a data-email href="#">hello@thebookaddic.com</a> — a real person reads it, and
+      you'll get your copy either way.
+    </p>
+
+  </div>
+</section>
+
+<footer class="ty__foot">
+  <div class="wrap">
+    <p>
+      © <span data-year>2026</span> The Book Addic — E-Book Store. This file is licensed for
+      your personal use; please don't redistribute it. Trouble with your download?
+      Email <a data-email href="#">hello@thebookaddic.com</a>.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/funnel.js"></script>
+</body>
+</html>

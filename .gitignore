@@ -1,0 +1,19 @@
+# ── NEVER COMMIT THE BOOK ────────────────────────────────────────────────
+# This repo is public when served by GitHub Pages. Anything committed here
+# can be downloaded by anyone, with no payment. Host the PDF somewhere else
+# (Google Drive, Dropbox, R2, Gumroad) and point DOWNLOAD_URL at it.
+*.pdf
+*.epub
+*.mobi
+assets/book/
+
+# local preview only — harmless if uploaded, but not needed
+serve.ps1
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.swp
