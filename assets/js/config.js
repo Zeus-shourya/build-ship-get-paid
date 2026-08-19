@@ -132,7 +132,7 @@ var CONFIG = {
      funnel is configured in one place, and it is printed to the browser
      console as a reminder of what to paste into your gateway.
   ---------------------------------------------------------------------------- */
-  THANK_YOU_PAGE_URL: "YOUR_THANK_YOU_PAGE_URL_HERE",
+  THANK_YOU_PAGE_URL: "https://zeus-shourya.github.io/build-ship-get-paid/thank-you.html",
 
   /* --------------------------------------------------------------------------
      6. PAYMENT_METHODS
