@@ -25,9 +25,10 @@ $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $root
 
-# GitHub Pages hostnames are always lower-case, even when the account name
-# is not. The remote keeps whatever case you typed - git does not care.
-$siteUrl  = "https://$($User.ToLower()).github.io/$($Repo.ToLower())"
+# The site is served from a custom domain (see the CNAME file in the repo
+# root), so the public address is not the github.io one. Hardcoded here so
+# that re-running this script cannot point the URLs back at github.io.
+$siteUrl  = "https://bookaddic.shop"
 $thankYou = "$siteUrl/thank-you.html"
 $remote   = "https://github.com/$User/$Repo.git"
 
