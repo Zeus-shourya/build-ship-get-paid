@@ -11,7 +11,7 @@
 #    3. commit that change
 #    4. add the GitHub remote and push
 #
-#  You still have to do two things by hand afterwards — the script prints
+#  You still have to do two things by hand afterwards - the script prints
 #  them at the end. Neither can be automated from here.
 # =============================================================================
 
@@ -58,7 +58,7 @@ Edit-File "index.html" @(
   ,@('https://example\.com/funnel/assets/img/og-image\.jpg', "$siteUrl/assets/img/og-image.jpg")
   ,@('https://example\.com/funnel/index\.html',              "$siteUrl/")
   ,@('https://example\.com/funnel/',                         "$siteUrl/")
-  ,@('<!-- ← replace with your live URL -->',                '')
+  ,@('<!--[^>]*replace with your live URL[^>]*-->', '')
 )
 
 Edit-File "assets/js/config.js" @(
