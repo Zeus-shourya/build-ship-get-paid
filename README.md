@@ -259,6 +259,53 @@ After deploying, do these four things in order:
 
 ---
 
+
+---
+
+## 5b. Publishing to GitHub Pages
+
+There is a script that does the whole thing. From this folder:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File setup-github.ps1 -User YOUR_GITHUB_USERNAME
+```
+
+It works out your live URLs, writes them into `index.html` (canonical, `og:url`,
+`og:image`) and `config.js` (`THANK_YOU_PAGE_URL`), commits that, adds the
+remote and pushes. Add `-Repo some-other-name` to change the repository name
+(default: `build-ship-get-paid`), or `-WhatIf` to see the URLs without touching
+anything.
+
+Create the empty repository on GitHub first — no README, no .gitignore, no
+licence — at <https://github.com/new>. The script tells you this if the push
+fails.
+
+Then two manual steps it prints at the end:
+
+1. **Turn on Pages** — repo → Settings → Pages → *Deploy from a branch* →
+   `main` → `/ (root)`.
+2. **Set the Razorpay redirect** — see §3.
+
+### ⚠️ Do not commit the PDF
+
+GitHub Pages on the free plan only serves **public** repositories. A PDF
+committed to a public repo is listed in the file tree, browsable by anyone who
+opens the repo, and indexed by search engines — that is giving the book away.
+
+`.gitignore` therefore ignores `*.pdf`. Host the file elsewhere (Google Drive
+"anyone with the link", Dropbox, R2, S3) and put that address in
+`DOWNLOAD_URL`. If you have GitHub Pro you can serve Pages from a private repo,
+and then committing the PDF is fine.
+
+### If you would rather not use the script
+
+```bash
+git remote add origin https://github.com/USERNAME/build-ship-get-paid.git
+git push -u origin main
+```
+
+…then edit the five `example.com` URLs in `index.html` and
+`THANK_YOU_PAGE_URL` in `config.js` by hand.
 ## 6. Where the content came from
 
 Every claim, number, framework and chapter description on the sales page is

@@ -275,9 +275,9 @@
       : new URL("thank-you.html", window.location.href).href;
 
     console.info(
-      "%c[Build. Ship. Get Paid.]%c Paste this into Razorpay → Payment Button →\n" +
-      'edit → post-payment redirect:\n\n  ' + thankYou + "\n",
-      "font-weight:bold", "font-weight:normal"
+      "[Build. Ship. Get Paid.]\n" +
+      "Paste this into Razorpay → Payment Buttons → your button → Edit →\n" +
+      "post-payment redirect:\n\n    " + thankYou + "\n"
     );
   }
 
