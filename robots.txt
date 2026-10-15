@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+# Reserved for the paid PDF (see assets/files/README.txt); keep crawlers out.
+Disallow: /assets/files/
+
+Sitemap: http://bookaddic.shop/sitemap.xml

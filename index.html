@@ -4,14 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Build. Ship. Get Paid. | The Honest Playbook for Making Money With Websites</title>
-<meta name="description" content="A practical playbook for college students and beginners: what to build, who will pay for it, what to charge, and how to get your first customers without an audience. 10 chapters, 16 diagrams, copyable scripts and a 90-day action plan. No income promises.">
+<title>How to Make Money Building Websites | Build. Ship. Get Paid.</title>
+<meta name="description" content="Honest ebook on how to make money building websites: turn freelance web design into a student side hustle, with scripts, pricing and a 90-day plan.">
 <meta name="author" content="The Book Addic">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#100C0B">
-<link rel="canonical" href="https://bookaddic.shop/">
+<link rel="canonical" href="http://bookaddic.shop/">
 
 <!-- ===== OPEN GRAPH / SOCIAL ============================================
-     Replace the two absolute URLs below with your live domain once deployed.
+     BASE URL is http://bookaddic.shop/ (plain http until the custom domain
+     has an HTTPS certificate). When HTTPS works, replace "http://bookaddic.shop"
+     with "https://bookaddic.shop" in this file (canonical, og:url, og:image,
+     twitter:image, JSON-LD), sitemap.xml and robots.txt.
      og:image must be an absolute URL for Facebook/WhatsApp/LinkedIn to fetch it.
 ====================================================================== -->
 <meta property="og:type" content="website">
@@ -19,14 +23,17 @@
 <meta property="og:site_name" content="The Book Addic — E-Book Store">
 <meta property="og:title" content="Build. Ship. Get Paid. — The Honest Playbook for Making Money With Websites">
 <meta property="og:description" content="Anyone can build a website with AI now. Almost nobody knows who to sell it to, what to charge, or how to get paid. This is the book about that part.">
-<meta property="og:url" content="https://bookaddic.shop/">
-<meta property="og:image" content="https://bookaddic.shop/assets/img/og-image.jpg">
+<meta property="og:url" content="http://bookaddic.shop/">
+<meta property="og:image" content="http://bookaddic.shop/assets/img/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cover of the e-book Build. Ship. Get Paid. by The Book Addic: the honest playbook for making real money with websites while you're still in college. 10 chapters, 16 diagrams, scripts, 90-day plan.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Build. Ship. Get Paid.">
 <meta name="twitter:description" content="Build websites with AI. Sell them to people who actually pay. The honest playbook for student builders.">
-<meta name="twitter:image" content="https://bookaddic.shop/assets/img/og-image.jpg">
+<meta name="twitter:image" content="http://bookaddic.shop/assets/img/og-image.jpg">
+<meta name="twitter:image:alt" content="Cover of the e-book Build. Ship. Get Paid. by The Book Addic: the honest playbook for making real money with websites while you're still in college. 10 chapters, 16 diagrams, scripts, 90-day plan.">
 
 <link rel="icon" href="assets/img/cover.png">
 
@@ -58,26 +65,122 @@
 <script>(function(w,d,s,l,i){ ... })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
 ====================================================================== -->
 
+<!-- Structured data. If BOOK_PRICE in assets/js/config.js changes, change
+     offers.price below too. FAQ answers mirror the visible FAQ word for word;
+     the refund, delivery and publisher questions are left out on purpose. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "Build. Ship. Get Paid.",
-  "alternateName": "The Honest Playbook for Making Real Money With Websites While You're Still in College",
-  "bookEdition": "First Edition",
-  "bookFormat": "https://schema.org/EBook",
-  "numberOfPages": 92,
-  "inLanguage": "en",
-  "datePublished": "2026",
-  "publisher": { "@type": "Organization", "name": "The Book Addic" },
-  "about": ["Web development business", "Freelancing", "Digital products", "Student entrepreneurship"],
-  "offers": {
-    "@type": "Offer",
-    "price": "350.00",
-    "priceCurrency": "INR",
-    "availability": "https://schema.org/InStock",
-    "url": "https://bookaddic.shop/"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "http://bookaddic.shop/#publisher",
+      "name": "The Book Addic",
+      "alternateName": "The Book Addic — E-Book Store",
+      "url": "http://bookaddic.shop/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://bookaddic.shop/#website",
+      "url": "http://bookaddic.shop/",
+      "name": "The Book Addic — E-Book Store",
+      "inLanguage": "en-IN",
+      "publisher": { "@id": "http://bookaddic.shop/#publisher" }
+    },
+    {
+      "@type": ["Book", "Product"],
+      "@id": "http://bookaddic.shop/#book",
+      "name": "Build. Ship. Get Paid.",
+      "alternateName": "The Honest Playbook for Making Real Money With Websites While You're Still in College",
+      "description": "A practical playbook for college students and beginners: what to build, who will pay for it, what to charge, and how to get your first customers without an audience. 10 chapters, 16 diagrams, copyable scripts and a 90-day action plan. No income promises.",
+      "url": "http://bookaddic.shop/",
+      "image": [
+        "http://bookaddic.shop/assets/img/cover.png",
+        "http://bookaddic.shop/assets/img/og-image.jpg"
+      ],
+      "bookEdition": "First Edition",
+      "bookFormat": "https://schema.org/EBook",
+      "numberOfPages": 92,
+      "inLanguage": "en",
+      "datePublished": "2026",
+      "publisher": { "@id": "http://bookaddic.shop/#publisher" },
+      "brand": { "@type": "Brand", "name": "The Book Addic" },
+      "audience": { "@type": "Audience", "audienceType": "College students and beginners" },
+      "about": ["Web development business", "Freelancing", "Digital products", "Student entrepreneurship"],
+      "offers": {
+        "@type": "Offer",
+        "price": "350.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "http://bookaddic.shop/",
+        "seller": { "@id": "http://bookaddic.shop/#publisher" }
+      }
+    },
+    {
+      "@type": ["WebPage", "FAQPage"],
+      "@id": "http://bookaddic.shop/#webpage",
+      "url": "http://bookaddic.shop/",
+      "name": "How to Make Money Building Websites | Build. Ship. Get Paid.",
+      "description": "Honest ebook on how to make money building websites: turn freelance web design into a student side hustle, with scripts, pricing and a 90-day plan.",
+      "inLanguage": "en-IN",
+      "isPartOf": { "@id": "http://bookaddic.shop/#website" },
+      "about": { "@id": "http://bookaddic.shop/#book" },
+      "publisher": { "@id": "http://bookaddic.shop/#publisher" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "http://bookaddic.shop/assets/img/og-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this a coding book?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. It says so itself: it is not a coding tutorial. You will not learn JavaScript here. It is about the business side of websites — what to build, who will pay for it, how to price it, how to get the money out, and how to build a system around it. Chapter 4 covers choosing a practical stack and using AI to build quickly, but that chapter is deliberately the shortest kind of work in the book, because building is no longer the scarce skill." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this only for college students?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It is written with college students in mind — the examples, the time budget of ten to fifteen hours a week, and the advantages it tells you to exploit are all student-shaped. But the mechanics — revenue models, wedges, offers, outreach, pricing, contracts, systems — apply to any beginner or freelancer trying to turn web skills into paid work." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an existing audience?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No, and that is one of the book's central arguments. An entire chapter is devoted to getting your first ten customers without an audience — from your access list, from businesses physically near you, and from communities you already belong to. The service engine is the only one of the four that is completely decoupled from the traffic problem. It needs one conversation with one person who has a budget." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need advanced technical skills?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The book's position is that visual builders and AI assistants have made the technical act of producing a website accessible to almost anyone, and that what you cannot outsource is knowing what to build and why it should convert. It tells you to learn enough to fix things and to know when something is wrong — and warns you never to ship code to a paying client that you could not debug yourself at 2 a.m. without the AI." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will this guarantee that I make money?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. There is no guarantee, and any book that offers one is selling you something worse than a book. Your results depend on your effort, your judgement, your market, your timing, your existing skills and a meaningful amount of luck. Most people who start a website earn nothing from it. The book states this plainly on its disclaimer page rather than burying it." }
+        },
+        {
+          "@type": "Question",
+          "name": "What exactly do I get?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The complete first edition as a digital e-book: 10 chapters, 16 diagrams, copyable scripts, an exercise and an action plan at the end of every chapter, chapter checklists, an 18-question FAQ chapter, a short opinionated resources list, and the final 90-day action plan with its scorecard. 92 pages in total." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this a course?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. It is an e-book — a playbook you read and work through. There are no videos, no login, no cohort and no community attached. You download a file and it is yours." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I read it on my phone or laptop?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is a digital e-book delivered in the format supplied by the seller — a PDF, which opens on a phone, tablet, laptop or e-reader without any special software." }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I pay? Does it accept UPI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Payment is handled by an external gateway. The methods shown next to the buy button are the ones it accepts — typically UPI, debit and credit cards, net banking and wallets. You are taken to the gateway's own secure page to pay. This site never sees or stores your card, UPI ID or bank details." }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -113,7 +216,7 @@
   <div class="wrap hero__grid">
 
     <div>
-      <p class="eyebrow">The practical playbook for student builders</p>
+      <p class="eyebrow">The web design side hustle playbook for students</p>
 
       <h1 class="h-xl hero__title">
         <span>Build websites with AI.</span>
@@ -970,7 +1073,7 @@
   <div class="wrap">
     <div class="head head--center rv">
       <p class="eyebrow eyebrow--center">Questions</p>
-      <h2 class="h-lg">Straight answers.</h2>
+      <h2 class="h-lg">Straight answers about making money building websites.</h2>
     </div>
 
     <div class="faq rv">
